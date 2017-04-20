@@ -8,6 +8,22 @@ class Robot
 		@direction = gets.chomp
 	end
 
+	puts "Hello, I am Timmy. Please tell me what to do."
+	puts "For knowing my current position, type 'report'. For moving me forward, type 'move'."
+	puts "And for turning my direction type 'left' or 'right'."
+
+	input = gets.chomp
+	if input == "report"
+		self.report(status)
+	elsif input == "move"
+		self.move(position)
+	elsif input == "left" or "right"
+		self.turn(direction)
+	else
+		return
+	end
+			
+
 	def report(status)
 		puts @status
 	end
